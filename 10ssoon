@@ -1,0 +1,25 @@
+local guisoon = Instance.new("ScreenGui")
+local Soontext = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+guisoon.Name = "guisoon"
+guisoon.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+guisoon.ResetOnSpawn = false
+guisoon.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Soontext.Name = "Soontext"
+Soontext.Parent = guisoon
+Soontext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Soontext.BorderSizePixel = 0
+Soontext.Position = UDim2.new(0.176, 0, 0.026, 0)
+Soontext.Size = UDim2.new(0.647, 0, 0.081, 0)
+Soontext.Font = Enum.Font.SourceSans
+Soontext.Text = "Script soon"
+Soontext.TextColor3 = Color3.fromRGB(0, 0, 0)
+Soontext.TextScaled = true
+Soontext.TextWrapped = true
+
+UICorner.Parent = Soontext
+
+task.wait(10)
+guisoon:Destroy()
